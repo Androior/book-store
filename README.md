@@ -3,19 +3,19 @@
 # I. Introduction to project (non technical)
 
 # Categories (Start point of the app):
-Book Store App allows user to have quick access to different print types and categories of books published on Google's book API (https://www.googleapis.com/books/v1/volumes?q=printType=books).
+- Book Store App allows user to have quick access to different print types and categories of books published on Google's book API (https://www.googleapis.com/books/v1/volumes?q=printType=books).
 User can also see all books per different category for both print types (Books and Magazines). App reads data from the following urls per category:
    # Healty Lifestyle - https://www.googleapis.com/books/v1/volumes?q=printType=books&intitle:healthy+lifestyle
    # Welness - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:wellness
    # Healty Meals - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:healty+meals
 # Search bar:
-Users can search for various books published on the API which app is using. Search result is expected to be retrieve when the user type at least two characters in the search bar and the books based on search input will be listed on grid view.
+- Users can search for various books published on the API which app is using. Search result is expected to be retrieve when the user type at least two characters in the search bar and the books based on search input will be listed on grid view.
 # Sections:
-On main screen user is able to see all of the book types per category. There are three categories in total in this app: Healty Lifestyle, Welness and Healty Meals. By clicking "See All" user will be redirected on another screen where he can see all available books that belong to the certain category. When user clicks on book's image then he will be redirected to the book details' screen.
+- On main screen user is able to see all of the book types per category. There are three categories in total in this app: Healty Lifestyle, Welness and Healty Meals. By clicking "See All" user will be redirected on another screen where he can see all available books that belong to the certain category. When user clicks on book's image then he will be redirected to the book details' screen.
 # Book Details:
-When user will click on book's image (does not matter if he clicks from the main screen or screen where he searches for books) he can get more details about the book. Here user can get require more information about writter, content, average rating and so on. There is also button which allows to user to save his favorite books and see under the favorites section (more on this a bit latter). On this screen there is a button called "More Details" which allows user to see content of the book in web browser directly from the app.
+- When user will click on book's image (does not matter if he clicks from the main screen or screen where he searches for books) he can get more details about the book. Here user can get require more information about writter, content, average rating and so on. There is also button which allows to user to save his favorite books and see under the favorites section (more on this a bit latter). On this screen there is a button called "More Details" which allows user to see content of the book in web browser directly from the app.
 # Favorite Details:
-On main screen there is navigation to the favorite screen, where user can see his favorite (saved) books, can get more information such as who is writer, short description for the book content, average rating and some more details. Here user can see also his favorite/saved books. Option to read book content directly from the app using web browser is present in this screen.
+- On main screen there is navigation to the favorite screen, where user can see his favorite (saved) books, can get more information such as who is writer, short description for the book content, average rating and some more details. Here user can see also his favorite/saved books. Option to read book content directly from the app using web browser is present in this screen.
 
 # II. Introduction to technical part (which objects and libraries were used for making of the app)
 
