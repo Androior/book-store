@@ -125,5 +125,10 @@ public class SeeAllActivity extends AppCompatActivity implements BookClickInterf
     public void onSeeAllClick(int sectionType, int bookType) {
 
     }
+
+    @Override
+    public void onCloseClick() {
+
+    }
 }
 

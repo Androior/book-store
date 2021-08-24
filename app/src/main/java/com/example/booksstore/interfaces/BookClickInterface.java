@@ -6,4 +6,5 @@ public interface BookClickInterface {
 
     void onBookClick (Book book);
     void onSeeAllClick (int sectionType, int bookType);
+    void onCloseClick();
 }

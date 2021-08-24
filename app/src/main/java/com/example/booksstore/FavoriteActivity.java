@@ -22,6 +22,7 @@ import com.example.booksstore.adapter.FavoriteBookAdapter;
 import com.example.booksstore.common.Constants;
 import com.example.booksstore.db.FavoriteDBHelper;
 import com.example.booksstore.fragment.BookFragment;
+import com.example.booksstore.interfaces.BookClickInterface;
 import com.example.booksstore.model.Book;
 import com.example.booksstore.model.BookVolumeInfo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -29,7 +30,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class FavoriteActivity extends AppCompatActivity  {
+public class FavoriteActivity extends AppCompatActivity implements BookClickInterface {
     ArrayList<BookVolumeInfo> bookVolumeInfos;
     FavoriteDBHelper favoriteDBHelper;
     RecyclerView recyclerView;
@@ -84,12 +85,23 @@ public class FavoriteActivity extends AppCompatActivity  {
             }
 
             Collections.sort(bookVolumeInfos);
-            FavoriteBookAdapter favoriteBookAdapter = new FavoriteBookAdapter(getApplicationContext(), bookVolumeInfos);
+            FavoriteBookAdapter favoriteBookAdapter = new FavoriteBookAdapter(this, bookVolumeInfos,this);
             recyclerView.setAdapter(favoriteBookAdapter);
         }
     }
-    public void closeBookDetails(View view) {
-        finish();
+
+    @Override
+    public void onBookClick(Book book) {
+
     }
 
+    @Override
+    public void onSeeAllClick(int sectionType, int bookType) {
+
+    }
+
+    @Override
+    public void onCloseClick() {
+        finish();
+    }
 }

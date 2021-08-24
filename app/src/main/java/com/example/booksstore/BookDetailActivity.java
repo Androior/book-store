@@ -13,10 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.booksstore.common.Constants;
 import com.example.booksstore.db.FavoriteDBHelper;
+import com.example.booksstore.interfaces.BookClickInterface;
 import com.example.booksstore.model.Book;
 import com.example.booksstore.model.BookVolumeInfo;
 
-public class BookDetailActivity extends AppCompatActivity {
+public class BookDetailActivity extends AppCompatActivity implements BookClickInterface {
 
     public static final String BOOK = "BOOK";//kluc za intentot
     private boolean isFav;
@@ -58,6 +59,12 @@ public class BookDetailActivity extends AppCompatActivity {
 //        });
         FavoriteDBHelper favoriteDBHelper = new FavoriteDBHelper(this);
         checkIfBookIsFavorite(favoriteDBHelper);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCloseClick();
+            }
+        });
     }
 
     public void moreDetails(View view) {
@@ -79,9 +86,9 @@ public class BookDetailActivity extends AppCompatActivity {
         saveButton.setImageResource(R.drawable.ic_baseline_bookmark_24);
     }
 
-    public void closeBookDetails(View view) {
-        finish();
-    }
+//    public void closeBookDetails(View view) {
+//        finish();
+//    }
 
     private void checkIfBookIsFavorite(FavoriteDBHelper favoriteDBHelper) {
         try {
@@ -100,5 +107,20 @@ public class BookDetailActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onBookClick(Book book) {
+
+    }
+
+    @Override
+    public void onSeeAllClick(int sectionType, int bookType) {
+
+    }
+
+    @Override
+    public void onCloseClick() {
+        finish();
     }
 }

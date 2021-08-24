@@ -102,6 +102,8 @@ public class SearchActivity extends AppCompatActivity implements BookClickInterf
                     BookResponseModel bookResponseModel = gson.fromJson(jsonString, BookResponseModel.class);
                     Log.d(TAG, bookResponseModel.getKind());
                     bookResponseModel.setSectionType(Constants.SectionType.HEALTHY_LIFESTYLE);
+                    bookResponseModel.setSectionType(Constants.SectionType.WELLNESS);
+                    bookResponseModel.setSectionType(Constants.SectionType.HEALTHY_MEALS);
                     bookList = bookResponseModel.getItems();
                     if (bookList == null){
                         bookList = new ArrayList<>();
@@ -133,6 +135,11 @@ public class SearchActivity extends AppCompatActivity implements BookClickInterf
 
     @Override
     public void onSeeAllClick(int sectionType, int bookType) {
+
+    }
+
+    @Override
+    public void onCloseClick() {
 
     }
 }

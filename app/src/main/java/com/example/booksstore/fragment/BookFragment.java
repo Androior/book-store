@@ -156,4 +156,9 @@ public class BookFragment extends Fragment implements BookClickInterface {
         intent.putExtra(SeeAllActivity.BOOK_TYPE_EXTRA, bookType);
         startActivity(intent);
     }
+
+    @Override
+    public void onCloseClick() {
+
+    }
 }

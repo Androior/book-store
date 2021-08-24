@@ -37,7 +37,6 @@
                     android:layout_height="50dp"
                     android:src="@drawable/ic_close"
                     android:layout_alignParentRight="true"
-                    android:onClick="closeBookDetails"
                     android:padding="10dp"/>
 
             </RelativeLayout>

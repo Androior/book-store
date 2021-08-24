@@ -19,6 +19,7 @@ import com.example.booksstore.MainActivity;
 import com.example.booksstore.R;
 import com.example.booksstore.common.Constants;
 import com.example.booksstore.db.FavoriteDBHelper;
+import com.example.booksstore.interfaces.BookClickInterface;
 import com.example.booksstore.model.Book;
 import com.example.booksstore.model.BookVolumeInfo;
 
@@ -28,10 +29,12 @@ public class FavoriteBookAdapter extends RecyclerView.Adapter<FavoriteBookAdapte
 private ArrayList<BookVolumeInfo> bookVolumeInfos;
 private Context context;
 private LayoutInflater layoutInflater;
-    public FavoriteBookAdapter(Context context, ArrayList<BookVolumeInfo> books) {
+private BookClickInterface bookClickInterface;
+    public FavoriteBookAdapter(Context context, ArrayList<BookVolumeInfo> books, BookClickInterface bookClickInterface) {
         this.bookVolumeInfos = books;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
+        this.bookClickInterface = bookClickInterface;
     }
     @NonNull
     @Override
@@ -78,7 +81,12 @@ private LayoutInflater layoutInflater;
             textViewBookDescription = itemView.findViewById(R.id.bookDescription);
             imageViewSaveBook = itemView.findViewById(R.id.saveButton);
             imageViewClose = itemView.findViewById(R.id.closeButon);
-
+            imageViewClose.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bookClickInterface.onCloseClick();
+                }
+            });
         }
     }
 }
