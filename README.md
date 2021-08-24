@@ -5,9 +5,9 @@
 # Categories (Start point of the app):
 - Book Store App allows user to have quick access to different print types and categories of books published on Google's book API (https://www.googleapis.com/books/v1/volumes?q=printType=books).
 User can also see all books per different category for both print types (Books and Magazines). App reads data from the following urls per category:
-   # Healty Lifestyle - https://www.googleapis.com/books/v1/volumes?q=printType=books&intitle:healthy+lifestyle
-   # Welness - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:wellness
-   # Healty Meals - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:healty+meals
+- Healty Lifestyle - https://www.googleapis.com/books/v1/volumes?q=printType=books&intitle:healthy+lifestyle
+- Welness - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:wellness
+- Healty Meals - https://www.googleapis.com/books/v1/volumes?q=printType=books&?%20intitle:healty+meals
 # Search bar:
 - Users can search for various books published on the API which app is using. Search result is expected to be retrieve when the user type at least two characters in the search bar and the books based on search input will be listed on grid view.
 # Sections:
